@@ -1,0 +1,21 @@
+{
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "elm": "^0.19.0-no-deps",
+    "elm-analyse": "^0.16.4",
+    "elm-format": "^0.8.1",
+    "elm-live": "^3.4.0",
+    "uglify-js": "^3.5.15"
+  },
+
+  "compress_flags": "pure_funcs=[F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9],pure_getters,keep_fargs=false,unsafe_comps,unsafe",
+  "scripts": {
+    "watch": "elm-live src/Main.elm --pushstate=true -o -d public -- --output=public/main.js",
+    "analyse": "elm-analyse -o -s",
+    "build": "elm make src/Main.elm --optimize --output public/main.js && npm run compress",
+    "compress": "uglifyjs public/main.js --compress \"$npm_package_compress_flags\" | npx uglifyjs --mangle --output=public/main.js",
+    "clean": "rm -rf public/main.js"
+  },
+
+  "dependencies": {}
+}

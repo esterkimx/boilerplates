@@ -77,8 +77,7 @@ view _ =
             , p []
                 [ text
                     """
-                    Also, try open it with your mobile device 
-                    and add it to the home screen.
+                    Try to open this page on your mobile device and add it to your home screen.
                     """
                 ]
             ]

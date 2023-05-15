@@ -2,9 +2,9 @@
 
 git init
 git submodule add https://github.com/mosra/corrade.git
-git submodule add	https://github.com/mosra/magnum.git
+git submodule add https://github.com/mosra/magnum.git
 git submodule add https://github.com/glfw/glfw.git
 git add --all
-git reset -- $0
+git reset -- "$0"
 git commit -m "init"
-rm $0
+rm -- "$0"

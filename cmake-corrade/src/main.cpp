@@ -2,6 +2,7 @@
 
 using namespace Corrade;
 
-void main() {
+int main(int argc, char** argv) {
     Utility::Debug{} << "It Works!";
+    return 0;
 }
